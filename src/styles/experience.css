@@ -1,0 +1,95 @@
+/* EXPERIENCE SECTION - FLIP CARD STYLE */
+.experience {
+  padding: 30px 40px;
+  text-align: center;
+}
+
+.experience h2 {
+  margin-bottom: 50px;
+}
+
+.exp-list {
+  display: grid;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 260px));
+}
+
+/* FLIP CARD */
+.exp-card {
+  perspective: 1000px;
+}
+
+.exp-inner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.exp-card:hover .exp-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT & BACK */
+.exp-front,
+.exp-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .exp-front {
+  background: #222 !important;
+}
+
+body.dark .exp-back {
+  background: #222 !important;
+}
+
+/* FRONT SIDE */
+.exp-front h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #2ecc71;
+}
+
+.exp-front p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 2px 0;
+}
+
+/* BACK SIDE */
+.exp-back {
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.exp-back .desc {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.exp-img {
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}

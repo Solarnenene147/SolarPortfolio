@@ -1,0 +1,13 @@
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .highlight {
+  color: #2ecc71;
+}

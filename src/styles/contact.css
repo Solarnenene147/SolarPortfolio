@@ -1,0 +1,69 @@
+/* Contact Section */
+.contact {
+  padding: 60px 30px 40px 30px;
+  text-align: center;
+}
+
+/* Contact buttons container */
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* Icon buttons */
+.icon-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #2ecc71;
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  /* Animation khi lướt đến */
+  opacity: 0;
+  transform: translateY(30px) scale(0.8);
+  transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s,
+    color 0.3s;
+}
+
+.icon-btn.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Hover effect */
+.icon-btn:hover {
+  transform: translateY(-5px) scale(1.1);
+  background: #27ae60;
+  color: #fff;
+}
+
+/* Dark mode */
+body.dark .icon-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #555;
+  color: #fff;
+}
+
+body.dark .icon-btn:hover {
+  background: #17aa54;
+  color: #fff;
+}
+
+/* Nếu bên trong có <a> */
+.icon-btn a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
