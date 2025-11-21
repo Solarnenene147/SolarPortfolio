@@ -4,8 +4,7 @@ export const skills = [
   { id: 3, name: "JavaScript" },
   { id: 4, name: "HTML" },
   { id: 5, name: "CSS" },
-  { id: 6, name: "TailwindCSS" },
-  { id: 7, name: "UI/UX Design" },
-  { id: 8, name: "Git/GitHub" },
-  { id: 10, name: "MySQL" },
+  { id: 6, name: "UI/UX Design" },
+  { id: 7, name: "Git/GitHub" },
+  { id: 8, name: "MySQL" },
 ];
